@@ -1,0 +1,27 @@
+import java.lang.*;//
+
+public class hello
+{
+	public static void main(String[]args)
+	{
+		System.out.println("Hello JAVA!!");
+	}		
+}
+
+/*
+	파일명 : Hello.java
+
+	먼저 소스 코드가 있는 폴더로 이동
+	d:
+	cd D:\lecture\java\src\day1
+
+	1. 컴파일(컴파일러인 javac 이용)
+	javac Hello.java
+
+	2. 실행 (자바 Launcher인 java 이용)
+	java Hello
+
+	3. 파일 목록 확인
+	dir
+
+*/
