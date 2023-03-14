@@ -30,5 +30,10 @@ public class VarTest1
 
 		System.out.println("a="+a+", b="+b);	// a=10, b=20
 		System.out.println("k + n = " + (k+n));	// k + n = 90
+		
+		//a변수의 값 변경 가능
+		a=300;
+		
+		// int a =40; //error : 같은 이름의 변수를 다시 선언할 수 없다.
 	}
 }
