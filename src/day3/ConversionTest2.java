@@ -13,5 +13,18 @@ class ConversionTest2 {
 
       char ch3 = (char)(ch1 + 2); //65 + 2 => 67 => char로 형변환
       //char ch4 = (char)ch1 + 2;   //비교, Char + int => int라서 char에 안담김
+ 
+	  int a=97;
+	  char b=(char)a;
+	  int c=122;
+	  char d=(char)c;
+	  char d2=(char)c; 
+	  //char d2=c;	error, int -> char로 자동 형변환 안됨 !!
+
+	  System.out.println("유니코드"+a+" 에 해당하는 문자 : " +b);
+	  System.out.println("유니코드"+c+" 에 해당하는 문자 : " +d);
+
+		
+		
    }
 }

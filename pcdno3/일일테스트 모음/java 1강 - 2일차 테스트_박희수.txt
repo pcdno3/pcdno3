@@ -1,0 +1,242 @@
+[ java 1강 - 2일차 테스트]
+
+1. 변수란?
+데이터를 저장하는 저장소를 할당하고 이름을 부여한 것
+
+2. 자료형이란?
+데이터를 저장할때 어떤 크기로 정할지 정하는 것
+
+3.  해당하는 기본 자료형을 쓰고, 크기(byte)와 기억 가능 범위를 적으시오. 
+	(기억 가능 범위는 정수형인 경우만 쓸 것)
+
+	숫자형 
+		정수형 
+			1) byte / 1byte / -128~127
+			2) short/ 2byte / -32000~32000
+			3) int   / 4byte / -21억~22억
+			4) long / 8byte / -922경+922경
+
+		실수형
+			1) float	/ 4byte / 
+			2) double/ 8byte / 1.0 ^-28 ~ 1.0^28
+	문자형 - char 2byte
+	논리형 - boolean 1byte / false or true
+
+
+4. 다음 세 문장의 출력 결과를 쓰시오.
+System.out.println(1+3 + 7+" = 1+3+7");   // 11=1+3+7
+System.out.println("1+3+7=" + 1 + 3 + 7);   // 1+3+7=137
+System.out.println("1+3+7=" + (1 + 3 + 7)); // 1+3+7=11
+
+
+5.  아래 문제에서 제시하는 방법으로 변수를 선언하고 값을 할당하시오
+1) 정수형 변수를 하나 선언한 후 값을 할당
+int a;
+a=10;
+
+2) 정수형 변수를 하나 선언하면서 동시에 값을 할당
+int a=10;
+
+3) 정수형 변수 2개를 선언한 후 값을 할당
+int a,b;
+a=10;
+b=20;
+
+4) 정수형 변수 2개를 선언함과 동시에 값을 할당
+int a=10, b=20;
+
+
+
+6. 실수형은 값의 표현 범위보다 (  크기   )를 우선시하여 선택해야 한다.
+	float  - 대략 소수점 이하 (  16  )자리 까지 유효
+	double - 대략 소수점 이하 ( 32   )자리 까지 유효
+
+
+7. 논리형에 들어가는 값은?
+true / flase 
+
+
+
+8. char  -	영문자나 한글과 같은 문자 ( 유니코드 )를 저장해서 사용
+		char 형 변수에 값 저장시 ( 유니코드  ) 로 묶어서 저장
+		문자 하나를 변수에 저장하면 실제로는 해당 문자의 ( 코드값  )이 저장된다
+		(char은 실상 숫자형 자료형 => 연산도 가능함)
+
+
+9. 문자열을 다룰 때 사용하며, 값 저장시 " " (큰 따옴표) 를 사용하는 참조형 자료형은?
+String
+
+10. long 변수의 값에는 ( L  )을 붙여야 하고, float 변수의 값에는 (  F )를 붙여야 한다.
+
+
+11. 지역 변수란?
+{} 안에서만 선언해야하는 메인이되는 변수
+
+12. 지역변수는 반드시 ( 초기화   )해야 한다.
+(  초기화   )하지 않고, 사용하면 Error난다.
+
+
+13. 변수의 종류 3가지를 쓰시오.
+local 변수
+static 변수
+
+
+
+14. 자료형 대체 클래스로, 기본형 변수들도 때로는 객체로 다루어져야 하는 경우가 있는데, 
+이 때 사용되는 것이 무슨 클래스인가? 
+Boolean, Character, Integer, Byte 등이 이에 해당한다.
+
+class.util
+
+
+
+
+15. 주민번호를 담을 변수를 선언하고, 값을 할당한 후 출력하시오.
+예) 주민번호 : 900102-1112222
+String front="900102"; 
+String back="1112222";
+
+System.out.println("주민번호 : "+front+"-"+back);
+
+16. 상품 수량을 담을 변수와 미화(달러)를 담을 변수를 선언하고, 각각 값을 할당한 후 출력하시오.
+예) 수량 : 3, 금액 : 2.5 
+int num=3;
+float price=2.5F;
+
+System.out.println("수량 : "+num+", 금액 : "+price);
+
+
+17. 실수형 변수(float)를 하나 선언한 후 임의의 값을 할당하시오.
+float a;
+a=3.14F;
+
+char변수를 하나 선언하면서 동시에 값을 할당하시오.
+char ch1;
+ch1='H';
+
+long변수 2개를 선언한 후 값을 할당하시오.
+long a, b;
+a=1000L;
+b=2000L;
+
+String변수 2개를 선언함과 동시에 값을 할당하시오.
+String str="자바", str2="재밌다";
+
+
+
+18. 아래 소스코드에서 주석부분에 어떤 결과가 나올지 예측하여 쓰시오
+
+
+class  Test1
+{
+	public static void main(String[] args) 
+	{
+		short a=30000;
+		int b = 2100000000; 
+
+		long e = a*b; // e = garbage 값 
+
+		byte x=128; // x = garbage 값
+		int y=Integer.MAX_VALUE; 
+		int z=y+1;   // z= garbage 값
+
+		System.out.println("e="  + e);
+		System.out.println("z="  + z);
+
+	}
+}
+
+
+19. 아래 코드에서 각각 어떤 값이 출력될지 주석부분에 쓰시오.
+
+class  Test1
+{
+	public static void main(String[] args) 
+	{
+		char f = 'b';
+		int h = f+3;  
+		System.out.println(h);  // 101
+
+		char i = (char)h;  
+		System.out.println(i);  // e
+
+		char k = 97;  
+		System.out.println(k);  // a
+
+		System.out.println((int)k);  // 97
+
+	}
+}
+
+
+20. 게시판의 제목, 글쓴날짜, 조회수, 이메일을 담을 변수를 선언하고, 값을 할당한 후 출력하시오.
+String title="자바 할사람";
+String day="2023-03-15";
+int hits=20000;
+String mail="pcdno3@naver.com";
+
+System.out.println(title);
+System.out.println(day);
+System.out.println(hits);
+System.out.println(mail);
+
+
+21. 표현하기 어려운 문자 상수를 표현할 수 있는 방법으로,
+문자열 안에서 특별한 의미로 해석되는 문자를 가리켜 무엇이라 하는가?
+
+개행(줄바꿈)  => \n
+탭	 =>	\t
+큰 따옴표	 => \"
+역슬래시	 =>\\
+
+
+22. 자바의 자료형에는 기본 자료형(값 타입)과 참조형(참조타입)이 있다.
+변수의 실제 값을 가지고 있으며, 메모리의 스택에 저장되는 것은  ( 값타입    ) 이고, 
+실제 값은 다른 곳에 있으며 값이 있는 주소를 가지고 있어서 나중에 그 주소를 참조해서 값을 가져올 수 있는 것은
+(  참조타입    ) 이다. 
+
+
+23. 참조형은 메모리의 ( 힙 )에 실제 값을 저장하고 그 참조값을 갖는 변수는 스택에 저장한다.
+
+
+
+24. Escape Sequence 이용하여 출력하기
+큰 따옴표, 탭, 역슬래시, new Line 이용
+단, println 메서드는 4번만 사용할 것
+System.out.println("d:\\exam\\test1.txt");
+System.out.println("Hello\t\"html\"");
+System.out.println("hello\nSpring"\n\n");
+System.out.println("Hi\nJsp!");
+
+(1강_2차.png 이미지 참고)
+
+
+
+25. 원래의 자료형이 아닌 다른 자료형으로 변환 되는 현상을 형변환이라고 하는데,
+형변환은 (   숫자형    ) 및 (  문자형      )에서 발생한다.
+
+26. boolean을 제외한 나머지 7개의 기본형은 서로 형변환이 가능하다.
+ 이때 사용되는 자동 현변환 규칙을 값의 범위가 작은 자료형부터 나열하시오
+ byte > short > int > long > float > double
+	 cha> int .....
+
+27. 형변환의 종류에는 자동형변환, 명시적 형변환이 있다.
+대입의 경우 언제 명시적 형변환해야 하나?
+
+큰 변수를 작은 변수로 변환해야 할때 명시적 형변환을 해야한다.
+
+
+
+28. int 변수, double 변수, byte 변수를 선언하고, 임의의 값을 할당한 후
+결과값을 받는 변수를 선언하여 (int변수 + double변수 + byte변수) 연산하기
+int i=1000;
+double d=3.14;
+byte a=10;
+double sol=(double)(i+d+a);
+
+System.out.println("정답은="+sol);
+
+29. double 변수를 선언하고, 임의의 값을 할당한 후, long 변수에 다시 할당하기
+double d=3.1415;
+long a=(long)d;
+

@@ -1,4 +1,4 @@
-class cost
+Cclass cost
 {
 	public static void main(String[] args) 
 	{
